@@ -10,8 +10,7 @@ const projects = [
       "Explain a serious business service quickly, build trust, and make the first action obvious.",
     uxMove:
       "Strong promise, direct call to action, Arabic-first layout, and a landing page that focuses on decision confidence.",
-    next:
-      "Turn this into a case study with funnel goals, conversion copy tests, and a cleaner before/after story.",
+    next: "Turn this into a case study with funnel goals, conversion copy tests, and a cleaner before/after story.",
     tags: ["Arabic UX", "Landing page", "Founder tools", "Market validation"],
     liveUrl: "https://zakintest-c7j3qezy.manus.space/",
   },
@@ -26,10 +25,25 @@ const projects = [
       "Help users scan food options quickly without overwhelming them with recipe data.",
     uxMove:
       "Visual recipe cards, clear category chips, visible search, and a simple account path for saved recipes.",
-    next:
-      "Improve empty states, add loading feedback per section, and document the search/filter decisions.",
+    next: "Improve empty states, add loading feedback per section, and document the search/filter decisions.",
     tags: ["Food app", "Search", "Filtering", "Responsive UI"],
     liveUrl: "https://recipe-assistant-pro.vercel.app/",
+  },
+  {
+    title: "Nathra",
+    type: "AI health risk assessment app",
+    image: "assets/nathra.png",
+    alt: "Nathra health risk assessment web app screenshot",
+    summary:
+      "A health-focused web application that demonstrates how patient inputs can be used to estimate heart disease risk through an AI-powered prediction flow.",
+    challenge:
+      "Present a sensitive AI health feature in a way that feels clear, serious, and understandable without making the interface overwhelming.",
+    uxMove:
+      "Structured form flow, direct result presentation, and educational copy that helps users understand that the tool is decision support, not a medical diagnosis.",
+    next: "Improve the case study with model limits, API architecture, validation rules, safety disclaimers, and a clearer before/after explanation of the prediction flow.",
+    tags: ["AI app", "Health tech", "Machine learning", "Form UX", "Vercel"],
+    liveUrl: "https://nathra.vercel.app/",
+    githubUrl: "https://github.com/moslemajra85/nathra",
   },
 ];
 
@@ -65,36 +79,97 @@ function renderSwitcher() {
   projectSwitcher.replaceChildren(...buttons);
 }
 
+// function createProjectCase(project, index) {
+//   const article = document.createElement("article");
+//   article.className = "project-case";
+
+//   const tags = project.tags.map((tag) => `<li>${tag}</li>`).join("");
+//   const projectNumber = String(index + 1).padStart(2, "0");
+
+//   article.innerHTML = `
+//     <div class="project-visual">
+//       <img src="${project.image}" alt="${project.alt}" loading="lazy">
+//     </div>
+//     <div class="project-content">
+//       <span class="project-index">${projectNumber} / ${project.type}</span>
+//       <h3>${project.title}</h3>
+//       <p>${project.summary}</p>
+//       <ul class="project-facts">
+//         <li><strong>Challenge</strong><span>${project.challenge}</span></li>
+//         <li><strong>UX move</strong><span>${project.uxMove}</span></li>
+//         <li><strong>Next pass</strong><span>${project.next}</span></li>
+//       </ul>
+//       <ul class="tag-list" aria-label="${project.title} tags">${tags}</ul>
+//       <div class="project-actions">
+//         <a class="button button-dark" href="${project.liveUrl}" target="_blank" rel="noreferrer">Visit live project</a>
+//       </div>
+//     </div>
+//   `;
+
+//   return article;
+// }
+
 function createProjectCase(project, index) {
   const article = document.createElement("article");
   article.className = "project-case";
 
   const tags = project.tags.map((tag) => `<li>${tag}</li>`).join("");
+
   const projectNumber = String(index + 1).padStart(2, "0");
+
+  const githubButton = project.githubUrl
+    ? `
+      <a class="button button-light" href="${project.githubUrl}" target="_blank" rel="noreferrer">
+        View source code
+      </a>
+    `
+    : "";
 
   article.innerHTML = `
     <div class="project-visual">
-      <img src="${project.image}" alt="${project.alt}" loading="lazy">
+      <img src="${project.image}" alt="${project.alt}">
     </div>
+
     <div class="project-content">
-      <span class="project-index">${projectNumber} / ${project.type}</span>
+      <div class="project-index">${projectNumber} / ${project.type}</div>
+
       <h3>${project.title}</h3>
+
       <p>${project.summary}</p>
+
       <ul class="project-facts">
-        <li><strong>Challenge</strong><span>${project.challenge}</span></li>
-        <li><strong>UX move</strong><span>${project.uxMove}</span></li>
-        <li><strong>Next pass</strong><span>${project.next}</span></li>
+        <li>
+          <strong>Challenge</strong>
+          <span>${project.challenge}</span>
+        </li>
+
+        <li>
+          <strong>UX move</strong>
+          <span>${project.uxMove}</span>
+        </li>
+
+        <li>
+          <strong>Next pass</strong>
+          <span>${project.next}</span>
+        </li>
       </ul>
-      <ul class="tag-list" aria-label="${project.title} tags">${tags}</ul>
+
+      <ul class="tag-list">
+        ${tags}
+      </ul>
+
       <div class="project-actions">
-        <a class="button button-dark" href="${project.liveUrl}" target="_blank" rel="noreferrer">Visit live project</a>
+        <a class="button button-dark" href="${project.liveUrl}" target="_blank" rel="noreferrer">
+          Visit live project
+        </a>
+
+        ${githubButton}
       </div>
     </div>
   `;
 
   return article;
 }
-
 function renderProjects() {
   projectList.replaceChildren(...projects.map(createProjectCase));
 }
