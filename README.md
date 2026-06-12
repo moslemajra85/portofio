@@ -45,12 +45,15 @@ The strongest portfolio pages do not only show screenshots. They explain the pro
 
 ## Current Live Projects
 
-The portfolio currently includes two live projects:
+The portfolio currently includes five live projects:
 
 | Project | Type | Live URL |
 | --- | --- | --- |
+| Brand Nexus | Pharma marketplace / AI UX contribution | <https://www.brandnexusmea.com/> |
+| FabMom | Motherhood companion app / product consulting | <https://fabmom.app/> |
 | Zakn | Business validation platform | <https://zakintest-c7j3qezy.manus.space/> |
 | Recipe Assistant Pro | Recipe discovery app | <https://recipe-assistant-pro.vercel.app/> |
+| Nathra | AI health risk assessment app | <https://nathra.vercel.app/> |
 
 More projects can be added later through the `projects` array in `script.js`.
 
@@ -103,8 +106,11 @@ That is intentional. For this project size, plain static files are simpler, fast
 | `index.html` | Defines the static page structure, sections, navigation, contact area, and script/style links. |
 | `styles.css` | Controls all visual design, layout, responsiveness, spacing, typography, and interaction styles. |
 | `script.js` | Stores project content and renders the project preview switcher and project case-study sections. |
+| `assets/brandnexusmea.png` | Screenshot used for the Brand Nexus project preview and case study. |
+| `assets/fabmom.png` | Screenshot used for the FabMom project preview and case study. |
 | `assets/zakn.png` | Screenshot used for the Zakn project preview and case study. |
 | `assets/recipe-assistant.png` | Screenshot used for the Recipe Assistant Pro project preview and case study. |
+| `assets/nathra.png` | Screenshot used for the Nathra project preview and case study. |
 | `favicon.svg` | Browser favicon for the portfolio. |
 | `README.md` | Project documentation. |
 

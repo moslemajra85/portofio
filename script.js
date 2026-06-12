@@ -1,5 +1,47 @@
 const projects = [
   {
+    title: "Brand Nexus",
+    type: "Pharma marketplace / AI UX contribution",
+    image: "assets/brandnexusmea.png",
+    alt: "Brand Nexus pharmaceutical marketing marketplace homepage showing AI-powered positioning and marketplace options",
+    summary:
+      "A pharmaceutical marketing marketplace connecting companies with vetted agencies, with an AI-assisted experience that supports discovery, brief shaping, and smarter vendor evaluation.",
+    challenge:
+      "Translate a complex B2B workflow into a credible interface for two sides: pharmaceutical companies that need quality and compliance control, and agencies that need clear opportunities.",
+    uxMove:
+      "Contributed graphical user interface design and shaped the AI section so users can understand the marketplace flow, compare options, and see how AI supports decisions without hiding the business logic.",
+    next: "Validate the AI section with real procurement scenarios, tighten empty states, and document the pharma-specific compliance assumptions behind the workflow.",
+    tags: [
+      "GUI design",
+      "AI experience",
+      "B2B marketplace",
+      "Pharma",
+      "Product consulting",
+    ],
+    liveUrl: "https://www.brandnexusmea.com/",
+  },
+  {
+    title: "FabMom",
+    type: "Motherhood companion app / product consulting",
+    image: "assets/fabmom.png",
+    alt: "FabMom landing page showing a motherhood companion app hero and beta signup form",
+    summary:
+      "A motherhood companion experience shaped around tracking, learning, and connection for mothers who need calm guidance instead of another noisy app.",
+    challenge:
+      "Turn early user stories into a practical product direction with a clear first experience, beta capture, and feature framing that speaks to real parent needs.",
+    uxMove:
+      "Helped formulate the product idea, translate user stories into concrete screens and flows, and shape the experience around clarity, emotional tone, and a simple beta path.",
+    next: "Expand the app story with onboarding states, content strategy, retention loops, and clearer proof of how user feedback will guide the roadmap.",
+    tags: [
+      "Product consulting",
+      "User stories",
+      "App concept",
+      "UX strategy",
+      "Beta landing page",
+    ],
+    liveUrl: "https://fabmom.app/",
+  },
+  {
     title: "Zakn",
     type: "Business validation platform",
     image: "assets/zakn.png",
