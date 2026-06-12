@@ -4,6 +4,7 @@ const projects = [
     type: "Pharma marketplace / AI UX contribution",
     image: "assets/brandnexusmea.png",
     alt: "Brand Nexus pharmaceutical marketing marketplace homepage showing AI-powered positioning and marketplace options",
+    role: "GUI design, AI experience shaping, product consulting",
     summary:
       "A pharmaceutical marketing marketplace connecting companies with vetted agencies, with an AI-assisted experience that supports discovery, brief shaping, and smarter vendor evaluation.",
     challenge:
@@ -11,13 +12,12 @@ const projects = [
     uxMove:
       "Contributed graphical user interface design and shaped the AI section so users can understand the marketplace flow, compare options, and see how AI supports decisions without hiding the business logic.",
     next: "Validate the AI section with real procurement scenarios, tighten empty states, and document the pharma-specific compliance assumptions behind the workflow.",
-    tags: [
-      "GUI design",
-      "AI experience",
-      "B2B marketplace",
-      "Pharma",
-      "Product consulting",
+    proof: [
+      "Structured the AI section around practical marketplace decisions, not decorative AI messaging.",
+      "Helped turn the product story into a clearer interface for pharma buyers and marketing agencies.",
+      "Focused the screen hierarchy on trust, compliance, and procurement clarity.",
     ],
+    stack: ["GUI design", "AI UX", "B2B marketplace", "Product consulting"],
     liveUrl: "https://www.brandnexusmea.com/",
   },
   {
@@ -25,6 +25,7 @@ const projects = [
     type: "Motherhood companion app / product consulting",
     image: "assets/fabmom.png",
     alt: "FabMom landing page showing a motherhood companion app hero and beta signup form",
+    role: "Product idea formulation, user story translation, UX direction",
     summary:
       "A motherhood companion experience shaped around tracking, learning, and connection for mothers who need calm guidance instead of another noisy app.",
     challenge:
@@ -32,13 +33,12 @@ const projects = [
     uxMove:
       "Helped formulate the product idea, translate user stories into concrete screens and flows, and shape the experience around clarity, emotional tone, and a simple beta path.",
     next: "Expand the app story with onboarding states, content strategy, retention loops, and clearer proof of how user feedback will guide the roadmap.",
-    tags: [
-      "Product consulting",
-      "User stories",
-      "App concept",
-      "UX strategy",
-      "Beta landing page",
+    proof: [
+      "Converted early user needs into a concrete product narrative and first landing experience.",
+      "Kept the beta path simple so the page can collect interest without overexplaining the product.",
+      "Balanced emotional tone with practical app positioning for mothers and families.",
     ],
+    stack: ["Product strategy", "User stories", "UX direction", "Beta validation"],
     liveUrl: "https://fabmom.app/",
   },
   {
@@ -46,6 +46,7 @@ const projects = [
     type: "Business validation platform",
     image: "assets/zakn.png",
     alt: "Zakn Arabic landing page screenshot with a dark hero and green call to action",
+    role: "Landing page UX, Arabic-first product positioning, conversion flow",
     summary:
       "An Arabic web product that helps founders test a business idea before spending heavily on it.",
     challenge:
@@ -53,7 +54,12 @@ const projects = [
     uxMove:
       "Strong promise, direct call to action, Arabic-first layout, and a landing page that focuses on decision confidence.",
     next: "Turn this into a case study with funnel goals, conversion copy tests, and a cleaner before/after story.",
-    tags: ["Arabic UX", "Landing page", "Founder tools", "Market validation"],
+    proof: [
+      "Built the page around one decision: helping founders understand whether the service fits their idea.",
+      "Used Arabic-first copy and layout choices instead of treating localization as an afterthought.",
+      "Prioritized trust-building sections and a direct call to action over generic startup language.",
+    ],
+    stack: ["Arabic UX", "Landing page", "Responsive UI", "Founder validation"],
     liveUrl: "https://zakintest-c7j3qezy.manus.space/",
   },
   {
@@ -61,6 +67,7 @@ const projects = [
     type: "Recipe discovery app",
     image: "assets/recipe-assistant.png",
     alt: "Recipe app screenshot showing category filters and a grid of recipe cards",
+    role: "Frontend UI, browsing flow, responsive recipe discovery",
     summary:
       "A recipe browsing experience with category filters, search entry points, and saved-recipe affordances.",
     challenge:
@@ -68,7 +75,12 @@ const projects = [
     uxMove:
       "Visual recipe cards, clear category chips, visible search, and a simple account path for saved recipes.",
     next: "Improve empty states, add loading feedback per section, and document the search/filter decisions.",
-    tags: ["Food app", "Search", "Filtering", "Responsive UI"],
+    proof: [
+      "Designed the browsing experience around fast visual scanning rather than long recipe lists.",
+      "Made categories and search visible early so users can quickly narrow their intent.",
+      "Used responsive card layouts to keep the experience usable across screen sizes.",
+    ],
+    stack: ["Frontend UI", "Search UX", "Filtering", "Responsive layouts"],
     liveUrl: "https://recipe-assistant-pro.vercel.app/",
   },
   {
@@ -76,6 +88,7 @@ const projects = [
     type: "AI health risk assessment app",
     image: "assets/nathra.png",
     alt: "Nathra health risk assessment web app screenshot",
+    role: "AI product flow, form UX, health risk interface",
     summary:
       "A health-focused web application that demonstrates how patient inputs can be used to estimate heart disease risk through an AI-powered prediction flow.",
     challenge:
@@ -83,7 +96,12 @@ const projects = [
     uxMove:
       "Structured form flow, direct result presentation, and educational copy that helps users understand that the tool is decision support, not a medical diagnosis.",
     next: "Improve the case study with model limits, API architecture, validation rules, safety disclaimers, and a clearer before/after explanation of the prediction flow.",
-    tags: ["AI app", "Health tech", "Machine learning", "Form UX", "Vercel"],
+    proof: [
+      "Separated patient input, prediction, and explanation into a clearer decision-support flow.",
+      "Used direct result presentation while keeping the health context serious and understandable.",
+      "Positioned the AI output as supportive information, not a replacement for medical judgment.",
+    ],
+    stack: ["AI workflow", "Form UX", "Health tech", "Vercel"],
     liveUrl: "https://nathra.vercel.app/",
     githubUrl: "https://github.com/moslemajra85/nathra",
   },
@@ -121,41 +139,16 @@ function renderSwitcher() {
   projectSwitcher.replaceChildren(...buttons);
 }
 
-// function createProjectCase(project, index) {
-//   const article = document.createElement("article");
-//   article.className = "project-case";
-
-//   const tags = project.tags.map((tag) => `<li>${tag}</li>`).join("");
-//   const projectNumber = String(index + 1).padStart(2, "0");
-
-//   article.innerHTML = `
-//     <div class="project-visual">
-//       <img src="${project.image}" alt="${project.alt}" loading="lazy">
-//     </div>
-//     <div class="project-content">
-//       <span class="project-index">${projectNumber} / ${project.type}</span>
-//       <h3>${project.title}</h3>
-//       <p>${project.summary}</p>
-//       <ul class="project-facts">
-//         <li><strong>Challenge</strong><span>${project.challenge}</span></li>
-//         <li><strong>UX move</strong><span>${project.uxMove}</span></li>
-//         <li><strong>Next pass</strong><span>${project.next}</span></li>
-//       </ul>
-//       <ul class="tag-list" aria-label="${project.title} tags">${tags}</ul>
-//       <div class="project-actions">
-//         <a class="button button-dark" href="${project.liveUrl}" target="_blank" rel="noreferrer">Visit live project</a>
-//       </div>
-//     </div>
-//   `;
-
-//   return article;
-// }
+function renderItems(items) {
+  return items.map((item) => `<li>${item}</li>`).join("");
+}
 
 function createProjectCase(project, index) {
   const article = document.createElement("article");
   article.className = "project-case";
 
-  const tags = project.tags.map((tag) => `<li>${tag}</li>`).join("");
+  const proofItems = renderItems(project.proof);
+  const stackItems = renderItems(project.stack);
 
   const projectNumber = String(index + 1).padStart(2, "0");
 
@@ -179,26 +172,41 @@ function createProjectCase(project, index) {
 
       <p>${project.summary}</p>
 
+      <div class="project-role">
+        <strong>My role</strong>
+        <span>${project.role}</span>
+      </div>
+
       <ul class="project-facts">
         <li>
-          <strong>Challenge</strong>
+          <strong>Problem</strong>
           <span>${project.challenge}</span>
         </li>
 
         <li>
-          <strong>UX move</strong>
+          <strong>Contribution</strong>
           <span>${project.uxMove}</span>
         </li>
 
         <li>
-          <strong>Next pass</strong>
+          <strong>Next step</strong>
           <span>${project.next}</span>
         </li>
       </ul>
 
-      <ul class="tag-list">
-        ${tags}
-      </ul>
+      <div class="project-proof">
+        <h4>Evidence of work</h4>
+        <ul>
+          ${proofItems}
+        </ul>
+      </div>
+
+      <div class="project-stack">
+        <h4>Relevant skills</h4>
+        <ul class="tag-list">
+          ${stackItems}
+        </ul>
+      </div>
 
       <div class="project-actions">
         <a class="button button-dark" href="${project.liveUrl}" target="_blank" rel="noreferrer">
